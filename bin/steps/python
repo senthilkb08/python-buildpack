@@ -7,7 +7,7 @@ fi
 PYTHON_VERSION=$($BUILDPACK_PATH/bin/steps/libs/version.rb $BUILDPACK_PATH/manifest.yml $PYTHON_VERSION)
 PYTHON_DIR=$DEPS_DIR/$DEPS_IDX/python
 
-yum install tkinter
+apt-get install python-tk
 
 # Install Python.
 if [ -f $CACHE_DIR/python-stack ]; then
